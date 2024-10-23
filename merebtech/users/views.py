@@ -6,6 +6,13 @@ from rest_framework.views import APIView
 from .models import CustomUser
 from .serializers import UserSerializer
 from rest_framework.authtoken.models import Token
+from django.contrib.auth.views import PasswordResetView
+from django.urls import reverse_lazy
+
+class CustomPasswordResetView(PasswordResetView):
+    success_url = reverse_lazy('password_reset_done')
+    template_name = 'registration/password_reset_form.html'
+
 
 class RegisterView(APIView):
     def post(self, request):

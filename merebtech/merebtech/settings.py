@@ -144,3 +144,21 @@ LOGIN_REDIRECT_URL = '/'
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'APP': {
+            'client_id': '182324389446-lngv4c9tdo04ubojlc54kgvm8ijqmo6b.apps.googleusercontent.com',
+            'secret': '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',
+            'key': ''
+        }
+    },
+    'facebook': {
+        'APP': {
+            'client_id': '<your-facebook-client-id>',
+            'secret': '<your-facebook-client-secret>',
+            'key': ''
+        }
+    }
+}
